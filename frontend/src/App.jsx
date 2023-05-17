@@ -13,10 +13,7 @@ import ResetPass from "./pages/ResetPass";
 import ReqResPass from "./pages/ReqResPass";
 import Deposit from "./pages/Deposit";
 import Withdraw from "./pages/Withdraw";
-<<<<<<< HEAD
-=======
 import Wallet from "./pages/Wallet";
->>>>>>> master
 
 function App() {
   return (
