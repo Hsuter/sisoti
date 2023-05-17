@@ -8,15 +8,6 @@ import ReactWhatsapp from "react-whatsapp";
 
 const Home = () => {
   const auth = useSelector((state) => state.auth);
-<<<<<<< HEAD
-  const [renderWhatsapp, setRenderWhatsapp] = useState(false);
-
-  const handleWhatsapp = () => {
-    setRenderWhatsapp(true);
-    console.log("clicked");
-  };
-=======
->>>>>>> master
 
   return (
     <div className="w-full  flex flex-col items-center text-white">
