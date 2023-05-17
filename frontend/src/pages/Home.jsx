@@ -8,12 +8,15 @@ import ReactWhatsapp from "react-whatsapp";
 
 const Home = () => {
   const auth = useSelector((state) => state.auth);
+<<<<<<< HEAD
   const [renderWhatsapp, setRenderWhatsapp] = useState(false);
 
   const handleWhatsapp = () => {
     setRenderWhatsapp(true);
     console.log("clicked");
   };
+=======
+>>>>>>> master
 
   return (
     <div className="w-full  flex flex-col items-center text-white">
@@ -41,10 +44,12 @@ const Home = () => {
         <TopCryptos simplified />
       </div>
       <div className="z-10 absolute bottom-0 right-0 mb-10">
-        <img src={whatsapp} onClick={handleWhatsapp} className="w-36" />{" "}
-        {renderWhatsapp && (
-          <ReactWhatsapp number="0769899804" message="Hello World!!!" />
-        )}
+        <ReactWhatsapp
+          number="+254 769899804"
+          message="Hello, Let's make some money"
+        >
+          <img src={whatsapp} className="w-36" />
+        </ReactWhatsapp>
       </div>
     </div>
   );
