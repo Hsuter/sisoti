@@ -27,20 +27,20 @@ const ReqResPass = () => {
   };
 
   return (
-    <div className="bg-white h-[100%] flex flex-col  items-center gap-4">
-      <div>
+    <div className="bg-white h-[100%] flex flex-col justify-center  items-center gap-4">
+      <div className="flex flex-col items-center justify-center">
         <img src={trader} className="w-full" alt="Phone image" />
         {requestPasswordResetStatus === "success" && (
-          <div className="font-bold mb-5 text-black">
-            <div className="font-bold mb-5 ">
-              <p>Email with instruction sent </p>
+          <div className="flex flex-col font-bold mb-5 text-yellow-500 items-center justify-center px-10 ">
+            <div className="flex flex-col font-bold mb-5 items-center justify-center ">
+              <p>Email with instruction sent,check your span folder </p>
             </div>
           </div>
         )}
         {requestPasswordResetStatus === "rejected" && (
-          <div className="font-bold mb-5 text-black ">
-            <div className="font-bold mb-5 ">
-              <p>Something went wrong </p>
+          <div className="font-bold mb-5 text-red ">
+            <div className="font-bold mb-5 px-10">
+              <p>Something went wrong, try again! </p>
             </div>
           </div>
         )}

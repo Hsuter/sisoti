@@ -37,18 +37,18 @@ const ResetPass = () => {
     console.log(isMatching);
   }, [isMatching]);
   return (
-    <div className="bg-white flex flex-col h-[100%] items-center gap-4">
-      <div>
+    <div className="bg-white flex flex-col h-[100%] items-center justify-center gap-4">
+      <div className="items-center justify-center">
         <img src={trader} className="w-full" alt="Phone image" />
         {resetPasswordConfirmationStatus === "success" && (
-          <div className="font-bold mb-5 text-black ">
+          <div className="font-bold mb-5 text-yellow-500 px-10">
             <p>Password reset successful,proceed to login </p>
           </div>
         )}
         {resetPasswordConfirmationStatus === "rejected" && (
-          <div className="font-bold mb-5 text-black ">
-            <div className="font-bold mb-5 ">
-              <p>Something went wrong </p>
+          <div className="font-bold mb-5 text-red ">
+            <div className="font-bold mb-5 px-10 ">
+              <p>Something went wrong, try again!</p>
             </div>
           </div>
         )}

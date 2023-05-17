@@ -6,7 +6,7 @@ import Person2OutlinedIcon from "@mui/icons-material/Person2Outlined";
 
 const BottomNav = () => {
   return (
-    <div className="sticky bottom-0 bg-white text-black border  flex gap-2 justify-around shadow-brown py-2   ">
+    <div className="fixed bottom-0 left-0 w-full bg-white text-black border flex justify-around shadow-brown py-2 ">
       <Link to="/">
         <HomeOutlinedIcon />
       </Link>

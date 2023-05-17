@@ -14,6 +14,7 @@ import ReqResPass from "./pages/ReqResPass";
 import Deposit from "./pages/Deposit";
 import Withdraw from "./pages/Withdraw";
 import Wallet from "./pages/Wallet";
+import Feedback from "./pages/Feedback";
 
 function App() {
   return (
@@ -121,6 +122,16 @@ function App() {
             <>
               <Menu />
               <Wallet />
+              <BottomNav />
+            </>
+          }
+        />
+        <Route
+          path="/feedback"
+          element={
+            <>
+              <Menu />
+              <Feedback />
               <BottomNav />
             </>
           }

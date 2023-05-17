@@ -51,8 +51,10 @@ const Menu = () => {
                 </Link>
               </li>
               <li>
-                <ChatBubbleOutlineOutlinedIcon />
-                Feedback
+                <Link to="/feedback">
+                  <ChatBubbleOutlineOutlinedIcon />
+                  Feedback
+                </Link>
               </li>
               <li>
                 <ContactSupportOutlinedIcon />
