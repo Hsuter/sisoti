@@ -31,7 +31,7 @@ const Menu = () => {
   return (
     <div className="w-[100%] p-5 flex text-white flex-row justify-between">
       <div className="flex flex-row">
-        BlackSails
+        <Link to="/"> BlackSails</Link>
         <div className="cursor-pointer">
           <span onClick={toggleMenu}>
             {menu ? <CloseOutlinedIcon /> : <KeyboardArrowDownOutlinedIcon />}

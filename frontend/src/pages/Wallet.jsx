@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import AccountBal from "../components/AccountBal";
 
-const Deposit = () => {
+const Wallet = () => {
   return (
     <>
       <div className="h-[100%]">
@@ -11,4 +11,4 @@ const Deposit = () => {
   );
 };
 
-export default Deposit;
+export default Wallet;

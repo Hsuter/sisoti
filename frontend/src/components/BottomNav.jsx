@@ -10,7 +10,7 @@ const BottomNav = () => {
       <Link to="/">
         <HomeOutlinedIcon />
       </Link>
-      <Link>
+      <Link to="/wallet">
         <AccountBalanceWalletOutlinedIcon />
       </Link>
       <Link>

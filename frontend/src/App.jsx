@@ -13,6 +13,7 @@ import ResetPass from "./pages/ResetPass";
 import ReqResPass from "./pages/ReqResPass";
 import Deposit from "./pages/Deposit";
 import Withdraw from "./pages/Withdraw";
+import Wallet from "./pages/Wallet";
 
 function App() {
   return (
@@ -110,6 +111,16 @@ function App() {
             <>
               <Menu />
               <Withdraw />
+              <BottomNav />
+            </>
+          }
+        />
+        <Route
+          path="/wallet"
+          element={
+            <>
+              <Menu />
+              <Wallet />
               <BottomNav />
             </>
           }
