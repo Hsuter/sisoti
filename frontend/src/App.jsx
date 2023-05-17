@@ -115,8 +115,6 @@ function App() {
             </>
           }
         />
-<<<<<<< HEAD
-=======
         <Route
           path="/wallet"
           element={
@@ -127,7 +125,6 @@ function App() {
             </>
           }
         />
->>>>>>> master
       </Routes>
     </div>
   );
