@@ -23,7 +23,7 @@ import GetStarted from "./pages/GetStarted";
 function App() {
   return (
     <div className="App flex-1 overflow-x-hidden h-[100vh] hide-scrollbar flex-col-reverse  bg-brown font-serif">
-      <ToastContainer className="absolute  w-20 right-0 z-10" />
+      <ToastContainer />
       <Routes>
         <Route
           path="/home"
