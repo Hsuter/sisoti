@@ -10,6 +10,7 @@ const AccountBal = () => {
   const [amountConverted, setAmountConverted] = useState("");
   const [newSymbol, setNewSymbol] = useState("");
   const [currencyList, setCurrencyList] = useState([]);
+  const [amount, setAmount] = useState(0);
 
   useEffect(() => {
     // Fetch exchange rates from an API
@@ -48,7 +49,7 @@ const AccountBal = () => {
         params: {
           from: "USD",
           to: currency,
-          amount: balance,
+          amount: amount,
         },
         headers: {
           "X-RapidAPI-Key":
@@ -73,20 +74,42 @@ const AccountBal = () => {
   }, [currency, balance]);
 
   return (
-    <div className="flex flex-col items-center mb-10 h-[100%] bg-white">
+    <div className="flex flex-col mb-10 h-[100%] bg-white items-center justify-center  ">
       <h1 className="text-[20px] my-6">Account Balance</h1>
-      <span className="text-[50px] flex flex-row">
+      <span className="items-center justify-center flex flex-row">
         {auth._id ? (
           <>
             {auth.balance ? (
               <>
-                <div className="flex flex-col items-center">
-                  <div className="flex">
-                    <span className="text-yellow-400 flex flex-row">$</span>
-                    <p>{auth.balance} </p>
+                <div className="flex flex-col items-center justify-center">
+                  <div className="flex flex-col  ">
+                    <div className="flex">
+                      <span className="text-yellow-400 flex flex-row">$</span>
+                      <p>{auth.balance} </p>
+                    </div>
                   </div>
-                  <div className="flex gap-2">
-                    <span className="text-yellow-400 flex flex-row">
+
+                  <h1 className="text-[20px] my-6">Currency Converter</h1>
+                  <input
+                    placeholder="Amount in dollars"
+                    className="border-2 p-2 mb-10"
+                    value={amount}
+                    onChange={(e) => setAmount(e.target.value)}
+                  />
+                  <select
+                    value={currency}
+                    onChange={(e) => setCurrency(e.target.value)}
+                    className="border-2"
+                  >
+                    <option>Choose your currency</option>
+                    {currencyList.map((currency) => (
+                      <option key={currency} value={currency}>
+                        {currency}
+                      </option>
+                    ))}
+                  </select>
+                  <div className="flex text-[40px] gap-2 m-10">
+                    <span className="text-yellow-400 flex flex-row ">
                       {newSymbol}
                     </span>
                     <p>{amountConverted}</p>
@@ -108,19 +131,6 @@ const AccountBal = () => {
           </>
         )}
       </span>
-      <h1 className="text-[20px] my-6">Currency Converter</h1>
-      <select
-        value={currency}
-        onChange={(e) => setCurrency(e.target.value)}
-        className="border-2"
-      >
-        <option>Choose your currency</option>
-        {currencyList.map((currency) => (
-          <option key={currency} value={currency}>
-            {currency}
-          </option>
-        ))}
-      </select>
     </div>
   );
 };

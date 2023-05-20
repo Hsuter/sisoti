@@ -10,7 +10,7 @@ import one from "./testominoals/one.jpg";
 import two from "./testominoals/two.jpg";
 import o from "./testominoals/o.jpg";
 import i from "./testominoals/i.jpg";
-
+import support1 from "./support1.jpg";
 import vid1 from "./testominoals/vid1.mp4";
 import vid2 from "./testominoals/vid2.mp4";
 import vid3 from "./testominoals/vid3.mp4";
@@ -23,4 +23,4 @@ const videos = [vid1, vid2, vid3, vid4, vid5, vid6, vid7];
 
 const images = [q, w, e, t, y, one, two, o, i];
 
-export { trader, whatsapp, images, videos };
+export { trader, whatsapp, images, videos, support1 };

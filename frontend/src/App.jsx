@@ -15,6 +15,7 @@ import Deposit from "./pages/Deposit";
 import Withdraw from "./pages/Withdraw";
 import Wallet from "./pages/Wallet";
 import Feedback from "./pages/Feedback";
+import Support from "./pages/Support";
 
 function App() {
   return (
@@ -132,6 +133,16 @@ function App() {
             <>
               <Menu />
               <Feedback />
+              <BottomNav />
+            </>
+          }
+        />
+        <Route
+          path="/support"
+          element={
+            <>
+              <Menu />
+              <Support />
               <BottomNav />
             </>
           }

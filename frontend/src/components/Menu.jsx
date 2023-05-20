@@ -57,8 +57,10 @@ const Menu = () => {
                 </Link>
               </li>
               <li>
-                <ContactSupportOutlinedIcon />
-                Contact us
+                <Link to="/support">
+                  <ContactSupportOutlinedIcon />
+                  Contact us
+                </Link>
               </li>
               <li className="flex flex-row">
                 <Link to="/login" className="flex flex-row">

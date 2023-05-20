@@ -2,3 +2,7 @@
   margin: 0;
   /* Remove default margin */
 }
+
+.support {
+  mask-image: linear-gradient(to bottom, rgb(164, 47, 47), rgba(13, 13, 13, 0));
+}
