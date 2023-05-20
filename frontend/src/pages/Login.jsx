@@ -4,6 +4,7 @@ import { loginUser } from "../services/authSlice";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { trader } from "../assets";
+import { isPending } from "@reduxjs/toolkit";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ const Login = () => {
   };
   useEffect(() => {
     if (auth._id) {
-      navigate("/");
+      navigate("/home");
     }
   }, [auth._id, navigate]);
 
@@ -35,7 +36,7 @@ const Login = () => {
             </div>
             <div className="md:w-8/12 lg:w-5/12 lg:ml-20 ">
               <h1 className="w-[100%] ml-[35%] text-[30px] mb-10 font-bold">
-                LogIn
+                Log In
               </h1>
               <form>
                 {/*Email*/}
@@ -104,7 +105,13 @@ const Login = () => {
                   data-mdb-ripple-color="light"
                   onClick={verify}
                 >
-                  Sign in
+                  <span>
+                    {auth.loginStatus == "pending" ? (
+                      <p>loading</p>
+                    ) : (
+                      <p>Sign in</p>
+                    )}
+                  </span>
                 </button>
                 <div className="flex gap-2">
                   <p className="text-black ">New to black sails?</p>

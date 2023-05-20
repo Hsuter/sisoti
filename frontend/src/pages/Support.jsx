@@ -24,12 +24,12 @@ const Support = () => {
           </button>
         </ReactWhatsapp>
       </div>
-      <div className="flex flex-col bg-brown items-center bottom-0">
+      <div className="flex flex-col bg-brown items-center ">
         <p className="text-white">
           <SupportAgentIcon />{" "}
           <span className="text-yellow-400">We offer 24hr support</span>
         </p>
-        <div className="flex flex-row  justify-around gap-2">
+        <div className="flex flex-row  justify-around gap-2 ">
           <p className="text-white flex gap-2 ">
             Help line:
             <span>

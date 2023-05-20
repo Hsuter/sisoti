@@ -6,3 +6,12 @@
 .support {
   mask-image: linear-gradient(to bottom, rgb(164, 47, 47), rgba(13, 13, 13, 0));
 }
+
+.started {
+  text-align: center;
+}
+
+.carousel {
+  mask-image: linear-gradient(to bottom, rgb(164, 47, 47), rgba(13, 13, 13, 0));
+
+}

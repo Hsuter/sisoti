@@ -16,13 +16,17 @@ import Withdraw from "./pages/Withdraw";
 import Wallet from "./pages/Wallet";
 import Feedback from "./pages/Feedback";
 import Support from "./pages/Support";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import GetStarted from "./pages/GetStarted";
 
 function App() {
   return (
-    <div className="App flex-1 overflow-x-hidden h-[100vh] hide-scrollbar flex-col-reverse  bg-brown">
+    <div className="App flex-1 overflow-x-hidden h-[100vh] hide-scrollbar flex-col-reverse  bg-brown font-serif">
+      <ToastContainer className="absolute  w-20 right-0 z-10" />
       <Routes>
         <Route
-          path="/"
+          path="/home"
           element={
             <>
               <Menu />
@@ -147,6 +151,7 @@ function App() {
             </>
           }
         />
+        <Route path="/" element={<GetStarted />} />
       </Routes>
     </div>
   );

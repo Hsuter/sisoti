@@ -7,7 +7,6 @@ import { whatsapp } from "../assets";
 import ReactWhatsapp from "react-whatsapp";
 import { getUser, loadUser } from "../services/authSlice";
 
-
 const Home = () => {
   const auth = useSelector((state) => state.auth);
 
@@ -22,13 +21,13 @@ const Home = () => {
       </div>
       <div className="flex gap-2">
         <Link to="/deposit">
-          <button className="p-2 rounded-lg bg-white text-black ">
-            Deposit
+          <button className="py-2 rounded-lg bg-white text-black w-28 ">
+            Invest
           </button>
         </Link>
 
         <Link to="/withdraw">
-          <button className="p-2 rounded-lg bg-white text-black ">
+          <button className="py-2 rounded-lg bg-white text-black w-28">
             Withdraw
           </button>
         </Link>

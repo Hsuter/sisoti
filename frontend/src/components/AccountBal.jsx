@@ -10,7 +10,7 @@ const AccountBal = () => {
   const [amountConverted, setAmountConverted] = useState("");
   const [newSymbol, setNewSymbol] = useState("");
   const [currencyList, setCurrencyList] = useState([]);
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState();
 
   useEffect(() => {
     // Fetch exchange rates from an API
@@ -29,7 +29,10 @@ const AccountBal = () => {
         const response = await axios.request(options);
         const currencies = response.data.map((currency) => currency.symbol);
         const uniqueCurrencies = [...new Set(currencies)]; // Remove duplicates
-        setCurrencyList(uniqueCurrencies);
+        const sortedCurrencies = uniqueCurrencies.sort((a, b) =>
+          a.localeCompare(b)
+        ); // Sort currencies alphabetically
+        setCurrencyList(sortedCurrencies);
       } catch (error) {
         console.error(error);
       }
@@ -74,17 +77,17 @@ const AccountBal = () => {
   }, [currency, balance]);
 
   return (
-    <div className="flex flex-col mb-10 h-[100%] bg-white items-center justify-center  ">
-      <h1 className="text-[20px] my-6">Account Balance</h1>
-      <span className="items-center justify-center flex flex-row">
+    <div className="flex flex-col bg-white items-center justify-center   ">
+      <h1 className="text-[20px] my-6 font-serif">Account Balance</h1>
+      <span className="items-center justify-center flex flex-row ">
         {auth._id ? (
           <>
             {auth.balance ? (
               <>
-                <div className="flex flex-col items-center justify-center">
-                  <div className="flex flex-col  ">
-                    <div className="flex">
-                      <span className="text-yellow-400 flex flex-row">$</span>
+                <div className="flex flex-col items-center justify-center ">
+                  <div className="flex flex-col  w-full items-center border-b-2  ">
+                    <div className="flex text-[40px] ">
+                      <span className="text-yellow-400 flex flex-row ]">$</span>
                       <p>{auth.balance} </p>
                     </div>
                   </div>

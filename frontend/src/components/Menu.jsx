@@ -11,6 +11,7 @@ import { logoutUser } from "../services/authSlice";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import { toast } from "react-toastify";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 
 const Menu = () => {
   const auth = useSelector((state) => state.auth);
@@ -40,6 +41,12 @@ const Menu = () => {
           <div className={`${menu ? "flex mt-2  ml-2 " : "hidden"}`}>
             <ul className="text-[12px] ">
               <li className="border-2 p-1">
+                <Link to="/home">
+                  <HomeOutlinedIcon />
+                  Home
+                </Link>
+              </li>
+              <li className="border-2 p-1">
                 <Link to="/cryprocurrencies">
                   <CurrencyBitcoinTwoToneIcon />
                   Cryptocurrencies
@@ -54,7 +61,7 @@ const Menu = () => {
               <li className="border-2 p-1">
                 <Link to="/feedback">
                   <ChatBubbleOutlineOutlinedIcon />
-                  Feedback
+                  Testimonials
                 </Link>
               </li>
               <li className="border-2 p-1">
