@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
+
 import { Link } from "react-router-dom";
 import LightbulbOutlinedIcon from "@mui/icons-material/LightbulbOutlined";
 import CurrencyBitcoinTwoToneIcon from "@mui/icons-material/CurrencyBitcoinTwoTone";
@@ -10,6 +10,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../services/authSlice";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import { toast } from "react-toastify";
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+
 const Menu = () => {
   const auth = useSelector((state) => state.auth);
   const dispatch = useDispatch();
@@ -31,38 +33,37 @@ const Menu = () => {
   return (
     <div className="w-[100%] p-5 flex text-white flex-row justify-between">
       <div className="flex flex-row">
-        <Link to="/"> BlackSails</Link>
-        <div className="cursor-pointer">
+        <div className="flex cursor-pointer">
           <span onClick={toggleMenu}>
-            {menu ? <CloseOutlinedIcon /> : <KeyboardArrowDownOutlinedIcon />}
+            {menu ? <CloseOutlinedIcon /> : <MenuOutlinedIcon />}
           </span>
-          <div className={`${menu ? "flex" : "hidden"}`}>
+          <div className={`${menu ? "flex mt-2  ml-2 " : "hidden"}`}>
             <ul className="text-[12px] ">
-              <li>
+              <li className="border-2 p-1">
                 <Link to="/cryprocurrencies">
                   <CurrencyBitcoinTwoToneIcon />
                   Cryptocurrencies
                 </Link>
               </li>
-              <li>
+              <li className="border-2 p-1">
                 <Link to="/news">
                   <LightbulbOutlinedIcon />
                   News
                 </Link>
               </li>
-              <li>
+              <li className="border-2 p-1">
                 <Link to="/feedback">
                   <ChatBubbleOutlineOutlinedIcon />
                   Feedback
                 </Link>
               </li>
-              <li>
+              <li className="border-2 p-1">
                 <Link to="/support">
                   <ContactSupportOutlinedIcon />
                   Contact us
                 </Link>
               </li>
-              <li className="flex flex-row">
+              <li className="flex flex-row border-2 p-1">
                 <Link to="/login" className="flex flex-row">
                   <LoginTwoToneIcon />
                   {auth._id ? (

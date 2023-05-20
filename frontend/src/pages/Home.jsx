@@ -7,6 +7,7 @@ import { whatsapp } from "../assets";
 import ReactWhatsapp from "react-whatsapp";
 import { getUser, loadUser } from "../services/authSlice";
 
+
 const Home = () => {
   const auth = useSelector((state) => state.auth);
 
