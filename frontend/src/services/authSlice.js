@@ -138,6 +138,7 @@ const authSlice = createSlice({
         return { ...state, userLoaded: true };
       }
     },
+
     logoutUser(state, action) {
       localStorage.removeItem("token");
 
@@ -229,6 +230,7 @@ const authSlice = createSlice({
         };
       } else return state;
     });
+
     builder.addCase(getUser.rejected, (state, action) => {
       return {
         ...state,

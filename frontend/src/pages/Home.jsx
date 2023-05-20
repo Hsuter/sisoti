@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import TopCryptos from "../components/TopCryptos";
 import { Link } from "react-router-dom";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { whatsapp } from "../assets";
 import ReactWhatsapp from "react-whatsapp";
+import { getUser, loadUser } from "../services/authSlice";
 
 const Home = () => {
   const auth = useSelector((state) => state.auth);
