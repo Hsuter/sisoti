@@ -119,6 +119,7 @@ const authSlice = createSlice({
   initialState,
   reducers: {
     loadUser(state, action) {
+      getUser();
       const token = state.token;
 
       if (token) {
@@ -135,6 +136,7 @@ const authSlice = createSlice({
           userLoaded: true,
         };
       } else {
+        getUser();
         return { ...state, userLoaded: true };
       }
     },

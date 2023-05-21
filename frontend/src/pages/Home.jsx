@@ -10,6 +10,12 @@ import { getUser, loadUser } from "../services/authSlice";
 const Home = () => {
   const auth = useSelector((state) => state.auth);
 
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadUser());
+  }, []);
+
   return (
     <div className="w-full  flex flex-col items-center text-white">
       <div className="flex flex-col items-center mb-10">
