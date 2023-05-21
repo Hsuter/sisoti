@@ -18,7 +18,7 @@ const Recharge = () => {
   };
 
   return (
-    <div className="flex w-full pb-16 gap-2 flex-col  items-center bg-gray-400 text-black rounded-t-lg">
+    <div className="flex w-full pb-20 gap-2 flex-col  items-center bg-gray-400 text-black rounded-t-lg">
       <div className="flex flex-col items-center">
         <h1 className="font-bold ">USDT</h1>
         <p className="font-bold text-yellow-300">
