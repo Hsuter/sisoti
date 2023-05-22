@@ -50,7 +50,9 @@ const GetStarted = () => {
           from various speculative market after in depth analysis.
         </p>
 
-        <p className="mt-2 text-yellow-300">Do you want to patner with us ? </p>
+        <p className="mt-2 text-yellow-300">
+          Do you want to partner with us ?{" "}
+        </p>
       </div>
       <div className="flex justify-center">
         <Link to="/signup">
