@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
     maxlength: 1024,
   },
   isAdmin: { type: Boolean, default: false },
-  balance: { type: String, minlength: 3, maxlength: 30 },
+  balance: { type: String, minlength: 0, maxlength: 30 },
   resetToken: { type: String },
   resetTokenExpiration: { type: Date },
 });

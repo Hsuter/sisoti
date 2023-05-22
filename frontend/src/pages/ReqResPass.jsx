@@ -20,9 +20,9 @@ const ReqResPass = () => {
     if (requestPasswordResetStatus == "success") {
       console.log("email sent");
     } else {
-      console.log("email not availbale");
+      null;
     }
-    console.log(email);
+
     dispatch(requestPasswordReset(email));
   };
 

@@ -30,7 +30,7 @@ router.post("/", async (req, res) => {
     const token = await generatePasswordResetToken(user);
 
     // Step 5: Send the password reset email
-    const resetLink = `${process.env.FRONTEND_URL}/reset-password-confirmation?token=${token}`;
+    const resetLink = `https://sisoti.onrender.com/reset-password-confirmation?token=${token}`;
 
     const emailSubject = "Password Reset";
     const emailHtml = `
