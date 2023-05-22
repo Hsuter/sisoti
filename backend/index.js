@@ -2,6 +2,8 @@ const helmet = require("helmet");
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const path = require("path");
+
 const app = express();
 const register = require("./routes/register");
 const login = require("./routes/login");
@@ -26,9 +28,12 @@ app.use("/api/login", login);
 app.use("/api/reset-password", resetPassword);
 app.use("/api/reset-password-confirmation", resetPasswordConfirmation);
 
-// Default route
-app.get("/", (req, res) => {
-  res.send("Welcome to our online shop API");
+// Serve static files
+app.use(express.static(path.join(__dirname, "client", "build")));
+
+// Catch-all route for client-side routing
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 // Connect to MongoDB
