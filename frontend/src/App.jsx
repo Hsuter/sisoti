@@ -19,6 +19,7 @@ import Support from "./pages/Support";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import GetStarted from "./pages/GetStarted";
+import RechargeRecords from "./Records/LiveRecords";
 
 function App() {
   return (
@@ -151,6 +152,7 @@ function App() {
             </>
           }
         />
+
         <Route path="/" element={<GetStarted />} />
       </Routes>
     </div>

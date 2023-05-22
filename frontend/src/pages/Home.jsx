@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { whatsapp } from "../assets";
 import ReactWhatsapp from "react-whatsapp";
 import { loadUser } from "../services/authSlice";
+import LiveRecords from "../Records/LiveRecords";
 
 const Home = () => {
   const auth = useSelector((state) => state.auth);
@@ -36,6 +37,9 @@ const Home = () => {
             Withdraw
           </button>
         </Link>
+      </div>
+      <div className="mt-10">
+        <LiveRecords />
       </div>
       <div className="flex flex-col bg-white w-[100%] rounded-t-3xl mt-10 ">
         <TopCryptos simplified />
