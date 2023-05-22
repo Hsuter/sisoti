@@ -25,7 +25,10 @@ const ResetPass = () => {
     e.preventDefault();
     const urlParams = new URLSearchParams(window.location.search);
     const token = urlParams.get("token");
-    console.log(resetPasswordConfirmationStatus);
+    if (resetPasswordConfirmationStatus == "success") {
+      toast.success("Password reset successfull", { position: "top-center" });
+    }
+
     dispatch(resetPasswordConfirmation({ token, password }));
   };
 
