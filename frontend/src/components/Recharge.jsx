@@ -27,7 +27,7 @@ const Recharge = () => {
       </div>
 
       <div className="items-center flex flex-col gap-2">
-        <h1>Wallet Address</h1>
+        <h1>Wallet Address (TRC20)</h1>
         <p className="border-2 bg-blue-200">
           {walletAddress}
           <span onClick={copyToClipboard}>
