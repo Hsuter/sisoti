@@ -19,22 +19,22 @@ const GetStarted = () => {
   }, [fximgs.length]);
 
   return (
-    <div className="bg-brown min-h-screen  gap-2 font-serif items-center flex flex-col mt-8 ">
+    <div className="min-h-screen  gap-2 font-serif items-center flex flex-col mt-8  ">
       <img src={logo} className="w-32" />
 
-      <div className="flex ">
+      <div className="flex  ">
         {fximgs.map((image, index) => (
           <img
             key={index}
             src={image}
             alt={`Slide ${index + 1}`}
-            className={`absolute top-0 border-2 border-yellow-200  left-0  w-full transition-opacity duration-500 mix-blend-overlay carousel ${
+            className={`absolute sm:ml-96 top-0 border-2  border-yellow-200   left-0   sm:w-[50vw] w-full transition-opacity duration-500 mix-blend-overlay carousel ${
               index === activeIndex ? "opacity-100" : "opacity-0"
             }`}
           />
         ))}
       </div>
-      <div className="flex flex-col started text-white items-center mx-4 mt-44">
+      <div className="flex flex-col started text-white items-center mx-4 md:mt-96 mt-44">
         <p className="content-center m-2 text-yellow-200 text-[16px]">Hello</p>
         <p className="">
           Welcome to our trading platform where we can invest a great fortune
@@ -50,13 +50,11 @@ const GetStarted = () => {
           from various speculative market after in depth analysis.
         </p>
 
-        <p className="mt-2 text-yellow-300">
-          Do you want to partner with us ?{" "}
-        </p>
+        <p className="mt-2 text-yellow-300">Do you want to partner with us ?</p>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center z-999">
         <Link to="/signup">
-          <button className="z-10 border-2  bg-yellow-300 rounded-full p-2 bottom-0 m-8 flex ">
+          <button className=" border-2  bg-yellow-300 rounded-full p-2 bottom-0 m-8 flex ">
             Get Started
           </button>
         </Link>

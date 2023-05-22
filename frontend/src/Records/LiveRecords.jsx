@@ -7,109 +7,109 @@ const RechargeRecords = () => {
   const records = [
     {
       name: "Brian",
-      Contact: "********897",
+      Contact: "*******897",
       depAmount: "90",
       withAmount: "890",
     },
     {
       name: "Paul",
-      Contact: "********847",
+      Contact: "*******847",
       depAmount: "600",
       withAmount: "7500",
     },
     {
       name: "Milly",
-      Contact: "********123",
+      Contact: "*******123",
       depAmount: "120",
       withAmount: "700",
     },
     {
       name: "Jane",
-      Contact: "********943",
+      Contact: "*******943",
       depAmount: "600",
       withAmount: "4500",
     },
     {
       name: "Frank",
-      Contact: "********723",
+      Contact: "*******723",
       depAmount: "170",
       withAmount: "4898",
     },
     {
       name: "Stev",
-      Contact: "********173",
+      Contact: "*******173",
       depAmount: "100",
       withAmount: "2000",
     },
     {
       name: "Brian",
-      Contact: "********473",
+      Contact: "*******473",
       depAmount: "250",
       withAmount: "500",
     },
     {
       name: "Brian",
-      Contact: "********284",
+      Contact: "*******284",
       depAmount: "150",
       withAmount: "1000",
     },
     {
       name: "Brian",
-      Contact: "********094",
+      Contact: "*******094",
       depAmount: "20",
       withAmount: "300",
     },
     {
       name: "Brian",
-      Contact: "********275",
+      Contact: "*******275",
       depAmount: "50",
       withAmount: "200",
     },
     {
       name: "Brian",
-      Contact: "********678",
+      Contact: "*******678",
       depAmount: "187",
       withAmount: "1112",
     },
     {
       name: "Brian",
-      Contact: "********990",
+      Contact: "*******990",
       depAmount: "200",
       withAmount: "5000",
     },
     {
       name: "Brian",
-      Contact: "********324",
+      Contact: "*******324",
       depAmount: "400",
       withAmount: "2950",
     },
     {
       name: "Brian",
-      Contact: "********984",
+      Contact: "*******984",
       depAmount: "984",
       withAmount: "10000",
     },
     {
       name: "Brian",
-      Contact: "********573",
+      Contact: "*******573",
       depAmount: "700",
       withAmount: "7000",
     },
     {
       name: "Brian",
-      Contact: "********129",
+      Contact: "*******129",
       depAmount: "300",
       withAmount: "7344",
     },
     {
       name: "Brian",
-      Contact: "********847",
+      Contact: "*******847",
       depAmount: "500",
       withAmount: "8000",
     },
     {
       name: "Brian",
-      Contact: "********445",
+      Contact: "*******445",
       depAmount: "100",
       withAmount: "2900",
     },
@@ -119,14 +119,14 @@ const RechargeRecords = () => {
     const changeDepositRecord = () => {
       const randomIndex = Math.floor(Math.random() * records.length);
       setDepositIndex(randomIndex);
-      const randomTime = Math.random() * 2000 + 1000; // Random time between 1 and 3 seconds
+      const randomTime = Math.random() * 1000 + 2000; // Random time between 1 and 3 seconds
       setTimeout(changeDepositRecord, randomTime);
     };
 
     const changeWithdrawalRecord = () => {
       const randomIndex = Math.floor(Math.random() * records.length);
       setWithdrawalIndex(randomIndex);
-      const randomTime = Math.random() * 2000 + 1000; // Random time between 1 and 3 seconds
+      const randomTime = Math.random() * 1000 + 2000; // Random time between 1 and 3 seconds
       setTimeout(changeWithdrawalRecord, randomTime);
     };
 
