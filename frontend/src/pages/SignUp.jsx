@@ -4,6 +4,8 @@ import { registerUser } from "../services/authSlice";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { trader } from "../assets";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -15,6 +17,8 @@ const SignUp = () => {
     password: "",
     confirmPass: "",
   });
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfPassword, setShowConfPassword] = useState(false);
   const [isMatching, setIsmatching] = useState(false);
   const [isEmailMatching, setEmailIsmatching] = useState(false);
 
@@ -51,7 +55,7 @@ const SignUp = () => {
 
   return (
     <div>
-      <section className="bg-white mb-20">
+      <section className="bg-white mb-20 ">
         <div className="container px-6 py-12 h-full">
           <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
             <div className="md:w-8/12 lg:w-6/12 mb-12 md:mb-0">
@@ -71,7 +75,7 @@ const SignUp = () => {
                 <div className="mb-6">
                   <input
                     type="text"
-                    className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-brown focus:outline-none"
                     placeholder="Full name"
                     onChange={(e) => {
                       setUser({ ...user, name: e.target.value });
@@ -83,7 +87,7 @@ const SignUp = () => {
                 <div className="mb-6">
                   <input
                     type="text"
-                    className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-brown focus:outline-none"
                     placeholder="Email address"
                     onChange={(e) => {
                       setUser({ ...user, email: e.target.value });
@@ -102,7 +106,7 @@ const SignUp = () => {
 
                 <input
                   type="text"
-                  className="form-control mb-6 block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                  className="form-control mb-6 block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-brown focus:outline-none"
                   placeholder="Confirm email address"
                   onChange={(e) => {
                     setUser({ ...user, confirmEmail: e.target.value });
@@ -110,29 +114,47 @@ const SignUp = () => {
                 />
 
                 {/*Password*/}
-                <div className="mb-6">
+                <div className="mb-6 flex flex-row w-full  text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white   focus:outline-none">
                   <input
-                    type="password"
-                    className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                    placeholder="Password"
+                    type={showPassword ? "text" : "password"}
+                    className=" px-4 py-2 w-full "
+                    placeholder="Password "
                     onChange={(e) => {
                       confirmPass();
                       setUser({ ...user, password: e.target.value });
                     }}
                   />
+                  <span
+                    className="p-2"
+                    onClick={() => setShowPassword(!showPassword)}
+                    style={{ cursor: "pointer" }}
+                  >
+                    {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+                  </span>
                 </div>
 
                 {/*Confirm Password*/}
-                <div className="mb-6">
+                <div className="mb-6 flex flex-row w-full  text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
                   <input
-                    type="password"
-                    className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    type={showConfPassword ? "text" : "password"}
+                    className="form-control block px-4 py-2 w-full"
                     placeholder="Cofirm Password"
                     onChange={(e) => {
                       confirmPass();
                       setUser({ ...user, confirmPass: e.target.value });
                     }}
                   />
+                  <span
+                    className="p-2"
+                    onClick={() => setShowConfPassword(!showConfPassword)}
+                    style={{ cursor: "pointer" }}
+                  >
+                    {showConfPassword ? (
+                      <VisibilityOffIcon />
+                    ) : (
+                      <VisibilityIcon />
+                    )}
+                  </span>
                 </div>
 
                 {isMatching ? (
@@ -166,10 +188,10 @@ const SignUp = () => {
 
                 <button
                   type="submit"
-                  className={`inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full ${
+                  className={`inline-block px-7 py-3 bg-brown text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full ${
                     isMatching && isEmailMatching
                       ? "cursor-pointer"
-                      : " text-rose-800 cursor-not-allowed pointer-events-none"
+                      : " text-yellow-900  cursor-not-allowed pointer-events-none"
                   }`}
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
@@ -195,7 +217,7 @@ const SignUp = () => {
                 <Link to="/login">
                   <button
                     type="submit"
-                    className="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full btnsgn"
+                    className="inline-block px-7 py-3 bg-brown text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full btnsgn"
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="light"
                   >
