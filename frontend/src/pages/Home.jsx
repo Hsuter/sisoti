@@ -66,7 +66,7 @@ const Home = () => {
           number="+254 726833608"
           message="Hello, Let's make some money"
         >
-          <img src={whatsapp} className="w-36" />
+          <img src={whatsapp} className="w-36 " />
         </ReactWhatsapp>
       </div>
     </div>
