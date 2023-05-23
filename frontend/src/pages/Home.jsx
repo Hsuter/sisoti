@@ -44,10 +44,10 @@ const Home = () => {
       </div>
       <div className="flex flex-col bg-yellow-600 gap-4 mt-8 flex-wrap items-center  justify-around w-full pb-8">
         <h1 className="text-brown font-bold ">Our pattners</h1>
-        <div className="flex flex-row gap-2 flex-wrap items-center justify-between w-full ">
+        <div className="flex flex-row gap-2 flex-wrap items-center justify-center w-full  ">
           {pattners.map((pattner, index) => (
             <>
-              <div className="flex flex-row  bg-brown rounded-lg">
+              <div className="flex flex-row  bg-brown rounded-lg mx-2">
                 <img
                   src={pattner}
                   alt="pattners"
