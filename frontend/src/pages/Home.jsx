@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <div className="w-full  flex flex-col items-center text-white">
       <div className="flex flex-col items-center mb-10">
-        <h1 className="text-[12px]">Account Balance</h1>
+        <h1 className="text-[15px]">Account Balance</h1>
         <span className="text-[50px] flex flex-row">
           <span className="text-yellow-400 flex flex-row">$</span>
           {auth.balance ? <p>{auth.balance}</p> : <p>0</p>}
@@ -42,12 +42,12 @@ const Home = () => {
       <div className="mt-10">
         <LiveRecords />
       </div>
-      <div className="flex flex-col gap-4 mt-8 flex-wrap items-center  justify-around w-full">
-        <h1 className=" font-bold underline ">Our pattners</h1>
+      <div className="flex flex-col bg-yellow-600 gap-4 mt-8 flex-wrap items-center  justify-around w-full pb-8">
+        <h1 className="text-brown font-bold ">Our pattners</h1>
         <div className="flex flex-row gap-2 flex-wrap items-center justify-around w-full ">
           {pattners.map((pattner, index) => (
             <>
-              <div className="flex flex-row  bg-black rounded-lg">
+              <div className="flex flex-row  bg-brown rounded-lg">
                 <img
                   src={pattner}
                   alt="pattners"
@@ -66,7 +66,7 @@ const Home = () => {
           number="+254 726833608"
           message="Hello, Let's make some money"
         >
-          <img src={whatsapp} className="w-36 " />
+          <img src={whatsapp} className="w-20 " />
         </ReactWhatsapp>
       </div>
     </div>
