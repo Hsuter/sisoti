@@ -33,44 +33,44 @@ const Menu = () => {
 
   return (
     <div className="w-[100%] p-5 flex text-white flex-row justify-between">
-      <div className="flex flex-row">
-        <div className="flex cursor-pointer">
+      <div className="flex flex-row ">
+        <div className="flex cursor-pointer ">
           <span onClick={toggleMenu}>
             {menu ? <CloseOutlinedIcon /> : <MenuOutlinedIcon />}
           </span>
-          <div className={`${menu ? "flex mt-2  ml-2 " : "hidden"}`}>
-            <ul className="text-[12px] ">
-              <li className="border-2 p-1">
+          <div className={`${menu ? " mt-2  ml-2 " : "hidden"}`}>
+            <ul className="text-[12px] text-yellow-300  ">
+              <li className="border-2 p-1 rounded-lg">
                 <Link to="/home">
                   <HomeOutlinedIcon />
                   Home
                 </Link>
               </li>
-              <li className="border-2 p-1">
+              <li className="border-2 p-1 rounded-lg">
                 <Link to="/cryprocurrencies">
                   <CurrencyBitcoinTwoToneIcon />
                   Cryptocurrencies
                 </Link>
               </li>
-              <li className="border-2 p-1">
+              <li className="border-2 p-1 rounded-lg">
                 <Link to="/news">
                   <LightbulbOutlinedIcon />
                   News
                 </Link>
               </li>
-              <li className="border-2 p-1">
+              <li className="border-2 p-1 rounded-lg">
                 <Link to="/feedback">
                   <ChatBubbleOutlineOutlinedIcon />
                   Testimonials
                 </Link>
               </li>
-              <li className="border-2 p-1">
+              <li className="border-2 p-1 rounded-lg">
                 <Link to="/support">
                   <ContactSupportOutlinedIcon />
                   Contact us
                 </Link>
               </li>
-              <li className="flex flex-row border-2 p-1">
+              <li className="flex flex-row border-2 p-1 rounded-lg">
                 <Link to="/login" className="flex flex-row">
                   <LoginTwoToneIcon />
                   {auth._id ? (
