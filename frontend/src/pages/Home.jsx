@@ -6,6 +6,7 @@ import { whatsapp } from "../assets";
 import ReactWhatsapp from "react-whatsapp";
 import { loadUser } from "../services/authSlice";
 import LiveRecords from "../Records/LiveRecords";
+import { pattners } from "../assets";
 
 const Home = () => {
   const auth = useSelector((state) => state.auth);
@@ -40,6 +41,22 @@ const Home = () => {
       </div>
       <div className="mt-10">
         <LiveRecords />
+      </div>
+      <div className="flex flex-col gap-4 mt-8 flex-wrap items-center  justify-around w-full">
+        <h1 className=" font-bold underline ">Our pattners</h1>
+        <div className="flex flex-row gap-2 flex-wrap items-center justify-around w-full ">
+          {pattners.map((pattner, index) => (
+            <>
+              <div className="flex flex-row  bg-black rounded-lg">
+                <img
+                  src={pattner}
+                  alt="pattners"
+                  className="md:w-[150px]  w-[80px] md:h[80px] h-[40px] "
+                />
+              </div>
+            </>
+          ))}
+        </div>
       </div>
       <div className="flex flex-col bg-white w-[100%] rounded-t-3xl mt-10 ">
         <TopCryptos simplified />

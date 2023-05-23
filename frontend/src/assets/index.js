@@ -46,6 +46,14 @@ import ts15 from "./testominoals/ts15.jpg";
 import ts16 from "./testominoals/ts16.jpg";
 import ts17 from "./testominoals/ts17.jpg";
 import ts18 from "./testominoals/ts18.jpg";
+import bnce from "./pattners/bnce.png";
+import bfx from "./pattners/bfx.png";
+import cb from "./pattners/cb.png";
+import gio from "./pattners/gio.png";
+import huobi from "./pattners/huobi.png";
+import okx from "./pattners/okx.png";
+
+const pattners = [bnce, bfx, cb, gio, huobi, okx];
 
 const fximgs = [fx1, fx2, fx3, fx4, fx5, fx6, fx7, fx8];
 const videos = [ts3, ts5];
@@ -69,4 +77,14 @@ const images = [
   ts18,
 ];
 
-export { trader, whatsapp, images, videos, support1, qr, fximgs, logo };
+export {
+  trader,
+  whatsapp,
+  images,
+  videos,
+  support1,
+  qr,
+  fximgs,
+  logo,
+  pattners,
+};

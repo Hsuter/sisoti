@@ -21,29 +21,35 @@ const Deposit = () => {
       <div className="bg-white h-full  flex flex-col items-center ">
         <div className="text-black w-full  cursor-pointer ">
           <ul className="list-none flex flex-col  ">
-            <li className=" bg-brown gap-8 flex text-white w-full items-center justify-center border-2  ">
-              invest 100 $
-              <span className="bg-yellow-300 text-black w-[50%] mr-[-100px] pl-8">
-                {" "}
+            <li className="  bg-brown gap-8 flex text-white w-full  border-2  ">
+              <p className="w-full items-center flex justify-center">
+                invest 100 $
+              </p>
+              <span className="bg-yellow-300 text-black w-full flex justify-center ">
                 income 1000 $
               </span>
             </li>
-            <li className=" bg-brown gap-8 flex text-white w-full items-center justify-center border-2">
-              invest 200 ${" "}
-              <span className="bg-yellow-300 text-black w-[50%] mr-[-100px] pl-8">
+            <li className="  bg-brown gap-8 flex text-white w-full  border-2  ">
+              <p className="w-full items-center flex justify-center">
+                invest 200 $
+              </p>
+              <span className="bg-yellow-300 text-black w-full flex justify-center ">
                 income 2000 $
               </span>
             </li>
-            <li className=" bg-brown gap-8 flex text-white w-full items-center justify-center border-2">
-              invest 300 $
-              <span className="bg-yellow-300 text-black w-[50%] mr-[-100px] pl-8">
+            <li className="  bg-brown gap-8 flex text-white w-full  border-2  ">
+              <p className="w-full items-center flex justify-center">
+                invest 300 $
+              </p>
+              <span className="bg-yellow-300 text-black w-full flex justify-center ">
                 income 3000 $
               </span>
             </li>
-            <li className=" bg-brown gap-8 flex text-white w-full items-center justify-center border-2">
-              invest 400 ${" "}
-              <span className="bg-yellow-300 text-black w-[50%] mr-[-100px] pl-8">
-                {" "}
+            <li className="  bg-brown gap-8 flex text-white w-full  border-2  ">
+              <p className="w-full items-center flex justify-center">
+                invest 400 $
+              </p>
+              <span className="bg-yellow-300 text-black w-full flex justify-center ">
                 income 4000 $
               </span>
             </li>
