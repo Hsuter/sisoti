@@ -209,6 +209,7 @@ const authSlice = createSlice({
         loginError: action.payload,
       };
     });
+
     builder.addCase(getUser.pending, (state, action) => {
       return {
         ...state,

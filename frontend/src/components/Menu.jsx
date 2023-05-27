@@ -85,7 +85,7 @@ const Menu = () => {
         </div>
       </div>
 
-      <div className="text-white">Welcome {auth.name}</div>
+      <div className="text-white">Welcome {auth.name.split(" ")[0]}</div>
     </div>
   );
 };
