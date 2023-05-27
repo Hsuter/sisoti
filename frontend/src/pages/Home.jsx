@@ -39,7 +39,7 @@ const Home = () => {
           </button>
         </Link>
       </div>
-      <div className="mt-10">
+      <div className="mt-10  flex ">
         <LiveRecords />
       </div>
       <div className="flex flex-col bg-yellow-600 gap-4 mt-8 flex-wrap items-center  justify-around w-full pb-8">

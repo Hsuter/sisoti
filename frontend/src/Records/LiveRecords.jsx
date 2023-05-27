@@ -248,8 +248,8 @@ const RechargeRecords = () => {
   }, [records.length]);
 
   return (
-    <div className="bg-brown items-center flex flex-col gap-6 border-b pb-8">
-      <div className="text-white flex flex-col items-center  gap-2">
+    <div className=" items-center flex flex-col gap-6 border-b pb-8 ">
+      <div className="text-white flex flex-col items-center  gap-2 ">
         <h1 className="text-yellow-300">Deposits</h1>
         <div className="flex flex-row gap-4">
           <div>{records[depositIndex].Contact}</div>
@@ -260,7 +260,7 @@ const RechargeRecords = () => {
           </div>
         </div>
       </div>
-      <div className="text-white flex flex-col items-center gap-2  ">
+      <div className="text-white flex flex-col items-center gap-2   ">
         <h1 className="text-yellow-300">Withdrawals</h1>
         <div className="flex flex-row gap-4 ">
           <div>{records[withdrawalIndex].Contact}</div>

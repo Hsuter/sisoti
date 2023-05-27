@@ -42,14 +42,15 @@ const SignUp = () => {
   useEffect(() => {
     confirmPass();
     confirmEmail();
+    if (auth._id) {
+      navigate("/home");
+    }
   }, [auth._id, confirmPass, confirmEmail]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(registerUser(user));
-    if (auth._id) {
-      navigate("/");
-    }
+
     console.log(auth);
   };
 
