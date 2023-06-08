@@ -7,13 +7,17 @@ const Withdraw = () => {
   const auth = useSelector((state) => state.auth);
 
   const handleWithdraw = () => {
-    {
+    if (auth._id) {
       toast.error(
         "Your account hass been suspended, Deposit 50 dollars to activate ",
         {
           position: "top-center",
         }
       );
+    } else {
+      toast.error("Log in to access your account", {
+        position: "top-center",
+      });
     }
   };
 
