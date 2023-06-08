@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
@@ -19,7 +19,7 @@ import Support from "./pages/Support";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import GetStarted from "./pages/GetStarted";
-import RechargeRecords from "./Records/LiveRecords";
+
 
 function App() {
   return (

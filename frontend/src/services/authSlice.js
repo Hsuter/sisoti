@@ -60,7 +60,7 @@ export const getUser = createAsyncThunk(
       const token = await axios.get(`${url}api/user/${id}`, setHeaders());
 
       localStorage.setItem("token", token.data);
-
+      console.log("erdtfgyhujnmk");
       return token.data;
     } catch (error) {
       return rejectWithValue(error.response.data);
@@ -118,6 +118,12 @@ const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
+    getBalance(state, action) {
+      getUser();
+      const nwbalance = jwtDecode(action.payload);
+      console.log(nwbalance);
+    },
+
     loadUser(state, action) {
       const token = state.token;
 
@@ -131,7 +137,7 @@ const authSlice = createSlice({
           email: user.email,
           _id: user._id,
           isAdmin: user.isAdmin,
-          balance: user.balance,
+
           userLoaded: true,
         };
       } else {
@@ -219,6 +225,7 @@ const authSlice = createSlice({
     builder.addCase(getUser.fulfilled, (state, action) => {
       if (action.payload) {
         const user = jwtDecode(action.payload);
+        console.log("dfcgvhbjnkm", user);
         return {
           ...state,
           token: action.payload,
@@ -290,6 +297,6 @@ const authSlice = createSlice({
   },
 });
 
-export const { loadUser, logoutUser } = authSlice.actions;
+export const { loadUser, logoutUser, getBalance } = authSlice.actions;
 
 export const authReducer = authSlice.reducer;

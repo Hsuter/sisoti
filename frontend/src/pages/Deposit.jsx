@@ -72,7 +72,7 @@ const Deposit = () => {
         <div
           className={` ${
             rechargeDetails
-              ? "flex  items-center translate-y-[-70vh] w-full"
+              ? "flex  items-center translate-y-[-22vh] w-full"
               : "hidden"
           }`}
         >

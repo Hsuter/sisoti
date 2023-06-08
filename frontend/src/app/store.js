@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { authReducer } from "../services/authSlice";
 import { cryptoApi } from "../services/cryptoApi";
 import { cryptoNewsApi } from "../services/cryptoNewsApi";
-import { loadUser } from "../services/authSlice";
+import { loadUser,getUser } from "../services/authSlice";
 
 const store = configureStore({
   reducer: {
@@ -18,5 +18,6 @@ const store = configureStore({
 });
 
 store.dispatch(loadUser(null));
+
 
 export default store;

@@ -31,6 +31,8 @@ const Menu = () => {
     toast.warning("You've logged out", { position: "top-center" });
   };
 
+  
+
   return (
     <div className="w-[100%] p-5 flex text-white flex-row justify-between">
       <div className="flex flex-row ">

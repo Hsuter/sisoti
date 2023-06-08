@@ -4,9 +4,11 @@ import TopCryptos from "../components/TopCryptos";
 import { Link } from "react-router-dom";
 import { whatsapp } from "../assets";
 import ReactWhatsapp from "react-whatsapp";
-import { loadUser } from "../services/authSlice";
+import { getUser, loadUser } from "../services/authSlice";
 import LiveRecords from "../Records/LiveRecords";
 import { pattners } from "../assets";
+import axios from "axios";
+import { url } from "../services/api";
 
 const Home = () => {
   const auth = useSelector((state) => state.auth);
@@ -15,6 +17,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(loadUser());
+    dispatch(getUser());
   }, []);
 
   return (
