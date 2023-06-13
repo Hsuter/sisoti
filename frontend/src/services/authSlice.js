@@ -118,12 +118,6 @@ const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    getBalance(state, action) {
-      getUser();
-      const nwbalance = jwtDecode(action.payload);
-      console.log(nwbalance);
-    },
-
     loadUser(state, action) {
       const token = state.token;
 
@@ -137,7 +131,7 @@ const authSlice = createSlice({
           email: user.email,
           _id: user._id,
           isAdmin: user.isAdmin,
-
+          balance: user.balance,
           userLoaded: true,
         };
       } else {
