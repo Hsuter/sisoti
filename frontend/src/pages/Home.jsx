@@ -66,7 +66,7 @@ const Home = () => {
       </div>
       <div className="z-10 absolute bottom-0 right-0 mb-10">
         <ReactWhatsapp
-          number="+254 726833608"
+          number="+254 768471962"
           message="Hello, Let's make some money"
         >
           <img src={whatsapp} className="w-20 " />
